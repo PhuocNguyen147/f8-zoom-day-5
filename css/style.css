@@ -2,6 +2,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
+    font-size: 62.5%;
 }
 
 /* Menu-enhance */
@@ -21,21 +22,19 @@ body {
     max-width: 1320px;
 }
 
-
 .navigation .list-menu a {
-    display:inline-block;
+    display: inline-block;
     font-size: 20px;
     font-weight: 500;
-    color: white; 
+    color: white;
     padding: 25px 30px;
     cursor: pointer;
 }
 
 .list-menu a:hover,
-.navigation .list-menu .active{
+.navigation .list-menu .active {
     background-color: white;
     color: black;
-    
 }
 
 .list-menu a:active {
@@ -43,11 +42,10 @@ body {
     background-color: #0037ff;
 }
 
-.navigation .list-menu a::before{
+.navigation .list-menu a::before {
     content: "\2022";
     margin-right: 5px;
 }
-
 
 /*
     làm sao sử dụng before để thêm vách ngăn giữa các mục được ạ?
@@ -59,15 +57,129 @@ body {
     background-color: black;
 } */
 
-.navigation ul li{
-    border-left: 2px solid black ;
+.navigation ul li {
+    border-left: 2px solid black;
 }
 
-.navigation ul li:last-child{
-    border-right: 2px solid black ;
+.navigation ul li:last-child {
+    border-right: 2px solid black;
 }
 
 .bg {
     height: 100vh;
     background-image: url(https://images.unsplash.com/photo-1487088678257-3a541e6e3922?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+/* form - interactive */
+
+.wrapper {
+    display: flex;
+    background: linear-gradient(to right, #5fdfdf, #0fbfd6);
+}
+
+.form {
+    margin: 50px auto;
+    padding: 30px 80px;
+    max-width: 500px;
+    background: linear-gradient(to left, #33cf5a, #4d9283);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 30px;
+}
+
+.form .form-heading {
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.form .form-label {
+    display: block;
+    font-size: 1.4rem;
+    padding: 16px 0 5px;
+}
+
+.form .form-label[for="email"]::after,
+.form-label[for="display-name"]::after,
+.form-label[for="password"]::after,
+.form-label[for="confirm-password"]::after,
+.form-label[for="gender"]::after,
+.form-label[for="phone-number"]::after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
+
+.form .form-input {
+    width: 300px;
+    padding: 6px 8px;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #240303;
+    font-weight: 500;
+}
+
+.form .form-input:focus {
+    background: rgb(255, 255, 255, 0.1);
+    border: 2px solid rgba(236, 184, 154, 0.8);
+    color: #fff;
+    font-weight: 500;
+}
+
+/* .form:focus{
+    border: 3px solid #0ddf87;
+    
+} */
+
+.form .form-group:has(:invalid:not(:placeholder-shown)) .form-input {
+    background: rgba(219, 26, 26, 0.3);
+    border: 1px solid #ff0000;
+}
+
+/* chỉ cần trong form có thẻ được focus thì lệnh được thicjw thi */
+.form:focus-within{
+    outline: 4px solid #7aeec7cf;
+    border-radius: 30px;
+}
+
+.form-avatar {
+    text-align: center;
+}
+.avatar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    cursor: pointer;
+}
+
+.label-check {
+    font-size: 1rem;
+}
+
+.form-vertical label {
+    display: block;
+}
+
+.btn {
+    margin-top: 40px;
+    font-size: 1.3rem;
+    min-width: 300px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 2px solid #666;
+    cursor: pointer;
+    background-color: #46c28e;
+    color: #0b1129;
+}
+
+.btn:hover {
+    background-color: #0ddf87;
+    color: white;
+}
+
+.btn:active{
+    background-color: #33cf5a;
 }
