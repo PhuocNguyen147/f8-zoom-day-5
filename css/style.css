@@ -138,8 +138,8 @@ body {
     border: 1px solid #ff0000;
 }
 
-/* chỉ cần trong form có thẻ được focus thì lệnh được thicjw thi */
-.form:focus-within{
+/* chỉ cần trong form có thẻ được focus thì lệnh được thực thi */
+.form:focus-within {
     outline: 4px solid #7aeec7cf;
     border-radius: 30px;
 }
@@ -180,6 +180,188 @@ body {
     color: white;
 }
 
-.btn:active{
+.btn:active {
     background-color: #33cf5a;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 27px;
+    margin: 0 6px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 21px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* pricing-table */
+
+.wrapper-pricing {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(to left, #67a3d4, #92c0f5, #2086c0);
+    height: 100vh;
+    padding-top: 150px;
+}
+
+.container-pricing {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 50px;
+    border-radius: 10px;
+    background-color: #e4edf7;
+}
+
+.head-pricing {
+    text-align: center;
+}
+.head-pricing .header {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.head-pricing .paragraph-header {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+.head-pricing .event {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+.head-pricing a {
+    text-decoration: none;
+    color: #3579ea;
+}
+
+.body-pricing {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.body-pricing .price-product {
+    padding: 30px 10px;
+    width: 265px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.body-pricing .price-product:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    outline: 3px solid  rgba(22, 39, 196, 0.301);
+}
+
+.body-pricing .name-price {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.body-pricing .price {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.body-pricing .feature-product {
+    color: #8e929e;
+    margin-top: 30px;
+    line-height: 2.2;
+    margin-left: 15px;
+}
+
+
+.body-pricing .features-available::before {
+    content: "✓";
+    color: #cc2d55;
+    font-size: 1.3rem;
+    margin-right: 5px;
+}
+
+.body-pricing .started {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.body-pricing .btn-product {
+    font-weight: 600;
+    color: #474d61;
+    min-width: 135px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.body-pricing .btn-product:hover {
+    color: whitesmoke;
+    background-color: #8e93a7;
+}
+
+.body-pricing .btn-product:active{
+    color: white;
+    background-color: #304fa3;
+}
+
+.body-pricing .price-product:nth-child(2) {
+    background: linear-gradient(to top, #0e5fa1, #116fbd, #1f73e0);
+    color: #ffffff;
+    font-size: 1reem;
 }
