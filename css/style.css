@@ -294,6 +294,8 @@ input:checked + .slider:before {
 }
 
 .body-pricing .price-product {
+    display: flex;
+    flex-direction: column;
     padding: 30px 10px;
     width: 265px;
     background-color: white;
@@ -321,6 +323,7 @@ input:checked + .slider:before {
 }
 
 .body-pricing .feature-product {
+    flex-grow: 1; /* để chiếm hết không gian */
     color: #8e929e;
     margin-top: 30px;
     line-height: 2.2;
@@ -339,6 +342,7 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
     margin-top: 25px;
+    margin-bottom: 0;
 }
 .body-pricing .btn-product {
     font-weight: 600;
